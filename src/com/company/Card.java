@@ -1,13 +1,20 @@
 package com.company;
 
-/**
- * Created by alla.baranova on 7/5/2016.
- */
+
 public class Card {
 
+    private int cardId;
     private String pin;
     private String firstName;
     private String lastName;
+
+    public int getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(int cardId) {
+        this.cardId = cardId;
+    }
 
     public String getPin() {
         return pin;
