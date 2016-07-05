@@ -1,21 +1,24 @@
 package com.company;
 
+import com.company.impl.CardReaderImpl;
+
 public class ATM {
-    CardReader cardReader;
-    DisplayMessage displayMessage;
+    //CardReader cardReader;
+    CardReaderImpl cardReaderImpl;
     Display display;
     Input input;
     Output output;
     ServerConnection serverConnection;
 
     public void insertCard() {
-        cardReader.getCardData();
+        cardReaderImpl.getCardData();
+        serverConnection.getAccount();
     }
 
 
     public boolean checkPin(){
-        String inputPin = displayMessage.getPin();
-        String cardPin = cardReader.getPin();
+        String inputPin = display.getPin();
+        String cardPin = cardReaderImpl.getPin();
         if (inputPin.equals(cardPin)) {
             return true;
         } else return false;
@@ -26,7 +29,7 @@ public class ATM {
     }
 
     public void selectWithDrowl() {
-        displayMessage.getSelection();
+        display.getSelection();
     }
 
     public void selectMoneyInput() {
@@ -46,7 +49,7 @@ public class ATM {
     }
 
     public int selectWithDrowlAmount() {
-        return displayMessage.getAmount();
+        return display.getAmount();
     }
 
     public boolean checkSum() {
@@ -61,7 +64,7 @@ public class ATM {
     }
 
     public void notEnough() {
-        displayMessage.notEnoughMessage();
+        display.notEnoughMessage();
     }
 
     public void changeSumAmount() {
@@ -69,7 +72,7 @@ public class ATM {
     }
 
     public void wrongPin() {
-        displayMessage.wrongPinMessage();
+        display.wrongPinMessage();
     }
 
     public void showSum(){
@@ -78,7 +81,7 @@ public class ATM {
     }
 
     public void showOptions() {
-        displayMessage.showOperations();
+        display.showOperations();
 
     }
 }

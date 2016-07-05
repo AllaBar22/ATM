@@ -35,11 +35,11 @@ public class Main {
 
                 case 3:
                     atm.showSum();
-                    break;
-                
+
+                                    break;
 
                 default:
-                    
+                    System.out.println("Place for Wrong input and relocation");
                                     break;
             }
 
