@@ -14,6 +14,6 @@ public class InputImplTest {
     @Test
     public void testCountMoney() throws Exception {
         InputImpl input = new InputImpl();
-        assertEquals(200,input.countMoney());
+        assertEquals(200, input.countMoney());
     }
 }

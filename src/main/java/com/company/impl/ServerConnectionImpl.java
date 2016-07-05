@@ -5,10 +5,6 @@ import com.company.ServerConnection;
 
 public class ServerConnectionImpl implements ServerConnection {
 
-    public ServerConnectionImpl() {
-        super();
-    }
-
     @Override
     public void getAccount() {
 
@@ -20,12 +16,13 @@ public class ServerConnectionImpl implements ServerConnection {
     }
 
     @Override
-    public void changeAccountSum() {
-
-    }
-
-    @Override
     public int getSum() {
         return 0;
     }
+
+    @Override
+    public void changeAccountSum(int amount) {
+
+    }
+
 }
