@@ -15,4 +15,8 @@ public interface Display {
     void notEnoughMessage();
 
     void wrongPinMessage();
+
+    void showSum(int sum);
+
+    void showOperations();
 }

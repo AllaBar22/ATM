@@ -8,6 +8,7 @@ public class Main {
         atm.insertCard();
         boolean pinOk = atm.checkPin();
         if (pinOk) {
+            atm.showOptions();
             int operationID = atm.selectOption();
 
             switch (operationID) {
@@ -23,6 +24,7 @@ public class Main {
                 case 2:
                     break;
                 case 3:
+                    atm.showSum();
                     break;
 
                 default:

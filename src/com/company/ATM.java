@@ -3,6 +3,7 @@ package com.company;
 public class ATM {
     CardReader cardReader;
     DisplayMessage displayMessage;
+    Display display;
     Input input;
     Output output;
     ServerConnection serverConnection;
@@ -49,5 +50,15 @@ public class ATM {
 
     public void wrongPin() {
         displayMessage.wrongPinMessage();
+    }
+
+    public void showSum(){
+        int sum = serverConnection.getSum();
+        display.showSum(sum);
+    }
+
+    public void showOptions() {
+        displayMessage.showOperations();
+
     }
 }
