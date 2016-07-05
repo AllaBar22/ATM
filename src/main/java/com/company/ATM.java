@@ -29,13 +29,13 @@ public class ATM {
         return display.getSelection();
     }
 
-    public void selectWithDrowl() {
-        display.getSelection();
-    }
-
-    public void selectMoneyInput() {
-        display.getSelection();
-    }
+//    public void selectWithDrowl() {
+//        display.getSelection();
+//    }
+//
+//    public void selectMoneyInput() {
+//        display.getSelection();
+//    }
 
     public void moneyInput() {
         input.takeMoney();
@@ -55,7 +55,7 @@ public class ATM {
 
     public boolean checkSum() {
         int accountSum = serverConnection.checkSum();
-        if (accountSum > selectWithDrowlAmount()) {
+        if (accountSum > display.getAmount()) {
             return true;
         } else return false;
     }

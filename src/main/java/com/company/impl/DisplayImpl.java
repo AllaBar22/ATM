@@ -1,5 +1,6 @@
 package com.company.impl;
 
+import com.company.ATM;
 import com.company.Display;
 
 import java.util.Scanner;
@@ -33,7 +34,7 @@ public class DisplayImpl implements Display {
 
     @Override
     public void showSum(int sum) {
-        System.out.println("Amount: "+sum);
+        System.out.println("Amount: " +sum);
     }
 
     @Override

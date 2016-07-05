@@ -1,28 +1,26 @@
 package com.company.impl;
 
-import com.company.ServerConnection;
 
+import com.company.ServerConnection;
 
 public class ServerConnectionImpl implements ServerConnection {
 
     @Override
     public void getAccount() {
-
     }
 
     @Override
     public int checkSum() {
-        return 0;
+        return 1000;
     }
 
     @Override
     public int getSum() {
-        return 0;
+        return 200;
     }
 
     @Override
     public void changeAccountSum(int amount) {
-
     }
 
 }
