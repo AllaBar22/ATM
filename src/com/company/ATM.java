@@ -14,13 +14,12 @@ public class ATM {
         cardReader.getCardData();
     }
 
-    public boolean checkPin(){
+    public boolean checkPin() {
         String inputPin = display.getPin();
         String cardPin = cardReader.getPin();
-        if(inputPin.equals(cardPin)){
-            return  true;
-        }
-        else return false;
+        if (inputPin.equals(cardPin)) {
+            return true;
+        } else return false;
     }
 
     public int selectOption() {
@@ -31,6 +30,22 @@ public class ATM {
         display.getSelection();
     }
 
+    public void selectMoneyInput() {
+        display.getSelection();
+    }
+
+    public void moneyInput() {
+        input.takeMoney();
+    }
+
+    public int checkAmount() {
+        return input.countMoney();
+    }
+
+    public void showAmount() {
+        display.showInputAmount();
+    }
+
     public int selectWithDrowlAmount() {
         return display.getAmount();
     }
@@ -39,7 +54,7 @@ public class ATM {
         int accountSum = serverConnection.checkSum();
         if (accountSum > selectWithDrowlAmount()) {
             return true;
-        }else return false;
+        } else return false;
     }
 
     public void withDrowl() {
@@ -48,6 +63,10 @@ public class ATM {
 
     public void notEnough() {
         display.notEnoughMessage();
+    }
+
+    public void changeSumAmount() {
+        serverConnection.changeAccountSum();
     }
 
     public void wrongPin() {

@@ -11,22 +11,34 @@ public class Main {
             int operationID = atm.selectOption();
 
             switch (operationID) {
-                case 1: atm.selectWithDrowl();
-                atm.selectWithDrowlAmount();
-                boolean sumOk = atm.checkSum();
-                if (sumOk) {
-                    atm.withDrowl();
-                } else {
-                    atm.notEnough();
-                }
-                break;
+                case 1:
+                    atm.selectWithDrowl();
+                    atm.selectWithDrowlAmount();
+                    boolean sumOk = atm.checkSum();
+                            if (sumOk) {
+                                atm.withDrowl();
+                                atm.changeSumAmount();
+                            } else {
+                                atm.notEnough();
+                            }
+                                    break;
+
                 case 2:
-                    break;
+                    atm.selectMoneyInput();
+                    atm.moneyInput();
+                    atm.checkAmount();
+                    atm.showAmount();
+                    atm.changeSumAmount();
+
+                                    break;
+
                 case 3:
-                    break;
+
+                                    break;
 
                 default:
-                    break;
+                    
+                                    break;
             }
 
 

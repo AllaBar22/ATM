@@ -15,4 +15,6 @@ public interface Display {
     void notEnoughMessage();
 
     void wrongPinMessage();
+
+    void showInputAmount();
 }
