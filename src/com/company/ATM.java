@@ -20,6 +20,10 @@ public class ATM {
         else return false;
     }
 
+    public int selectOption() {
+        return display.getSelection();
+    }
+
     public void selectWithDrowl() {
         displayMessage.getSelection();
     }

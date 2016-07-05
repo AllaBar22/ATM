@@ -8,7 +8,7 @@ import java.util.Enumeration;
 public interface Display {
     String getPin();
 
-    void getSelection();
+    int getSelection();
 
     int getAmount();
 
