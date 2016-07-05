@@ -1,5 +1,4 @@
-package com.company.impl;
-
+import com.company.impl.InputImpl;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -15,6 +14,6 @@ public class InputImplTest {
     @Test
     public void testCountMoney() throws Exception {
         InputImpl input = new InputImpl();
-        assertEquals(200,input.countMoney());
+        assertEquals(200, input.countMoney());
     }
 }

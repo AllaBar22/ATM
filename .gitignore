@@ -1,5 +1,6 @@
 # Intelij
 .idea/
+out/
 *.iml
 *.iws
 
