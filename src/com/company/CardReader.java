@@ -3,5 +3,8 @@ package com.company;
 /**
  * Created by alla.baranova on 7/5/2016.
  */
-public class CardReader {
+public interface CardReader {
+    void getCardData();
+
+    String getPin();
 }
