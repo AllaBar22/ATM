@@ -1,5 +1,4 @@
-package com.company.impl;
-
+import com.company.impl.InputImpl;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
