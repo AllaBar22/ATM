@@ -1,12 +1,10 @@
-package com.company;
+package com.company.impl;
 
-import java.io.InputStream;
+import com.company.Display;
+
 import java.util.Scanner;
 
-/**
- * Created by alla.baranova on 7/5/2016.
- */
-public class DisplayMessage implements Display{
+public class DisplayImpl implements Display {
     @Override
     public String getPin() {
         System.out.println("Enter pin code");
@@ -16,11 +14,13 @@ public class DisplayMessage implements Display{
 
     @Override
     public void wrongPinMessage() {
+
         System.out.println("Wrong pin code");
     }
 
     @Override
     public void notEnoughMessage() {
+
         System.out.println("Not enough money");
     }
 
@@ -32,19 +32,24 @@ public class DisplayMessage implements Display{
     }
 
     @Override
+    public void showSum(int sum) {
+        System.out.println("Amount: "+sum);
+    }
+
+    @Override
     public int getSelection() {
-        System.out.println("Select number of operation");
+        System.out.println("Select number of operations");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
 
     @Override
-    public void showSum(int sum) {
-        System.out.println("Account: "+ sum);
+    public void showOperations() {
+        System.out.println("1 - Withdraw\n2 - Input money\n3 - Account information");
     }
 
     @Override
-    public void showOperations() {
-        System.out.println("1 - Withdraw\n2 - Input money\n3 - Account information");
+    public void showInputAmount() {
+        System.out.println("Amount: ");
     }
 }
