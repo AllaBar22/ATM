@@ -1,10 +1,8 @@
 package com.company;
 
-/**
- * Created by alla.baranova on 7/5/2016.
- */
 public class ATM {
     CardReader cardReader;
+    DisplayMessage displayMessage;
     Display display;
     Input input;
     Output output;
@@ -14,8 +12,9 @@ public class ATM {
         cardReader.getCardData();
     }
 
-    public boolean checkPin() {
-        String inputPin = display.getPin();
+
+    public boolean checkPin(){
+        String inputPin = displayMessage.getPin();
         String cardPin = cardReader.getPin();
         if (inputPin.equals(cardPin)) {
             return true;
@@ -27,7 +26,7 @@ public class ATM {
     }
 
     public void selectWithDrowl() {
-        display.getSelection();
+        displayMessage.getSelection();
     }
 
     public void selectMoneyInput() {
@@ -47,7 +46,7 @@ public class ATM {
     }
 
     public int selectWithDrowlAmount() {
-        return display.getAmount();
+        return displayMessage.getAmount();
     }
 
     public boolean checkSum() {
@@ -62,7 +61,7 @@ public class ATM {
     }
 
     public void notEnough() {
-        display.notEnoughMessage();
+        displayMessage.notEnoughMessage();
     }
 
     public void changeSumAmount() {
@@ -70,6 +69,16 @@ public class ATM {
     }
 
     public void wrongPin() {
-        display.wrongPinMessage();
+        displayMessage.wrongPinMessage();
+    }
+
+    public void showSum(){
+        int sum = serverConnection.getSum();
+        display.showSum(sum);
+    }
+
+    public void showOptions() {
+        displayMessage.showOperations();
+
     }
 }
