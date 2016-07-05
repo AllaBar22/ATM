@@ -1,20 +1,21 @@
 package com.company;
 import com.company.impl.DisplayImpl;
 import com.company.impl.CardReaderImpl;
+import com.company.impl.InputImpl;
+import com.company.impl.ServerConnectionImpl;
 
 public class ATM {
     CardReader cardReader;
-    DisplayImpl display;
-    CardReaderImpl cardReaderImpl;
-    Input input;
+    DisplayImpl display = new DisplayImpl();
+    CardReaderImpl cardReaderImpl = new CardReaderImpl();
+    InputImpl input = new InputImpl();
     Output output;
-    ServerConnection serverConnection;
+    ServerConnectionImpl serverConnection = new ServerConnectionImpl();
 
     public void insertCard() {
         cardReaderImpl.getCardData();
         serverConnection.getAccount();
     }
-
 
     public boolean checkPin(){
         String inputPin = display.getPin();

@@ -6,19 +6,19 @@ import com.company.CardReader;
 
 
 public class CardReaderImpl implements CardReader {
-
+Card card = new Card();
     @Override
     public String getPin() {
-        Card card  = new Card();
+        card.setPin("12345");
         return card.getPin();
     }
 
 
     @Override
     public void getCardData() {
-        Card card = new Card();
+        card.setPin("12345");
+        card.setCardId(1);
         card.getCardId();
-        card.getFirstName();
-        card.getLastName();
+
     }
 }
