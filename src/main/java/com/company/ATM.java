@@ -34,13 +34,13 @@ public class ATM {
         return display.getSelection();
     }
 
-    public void selectWithDrowl() {
-        display.getSelection();
-    }
-
-    public void selectMoneyInput() {
-        display.getSelection();
-    }
+//    public void selectWithDrowl() {
+//        display.getSelection();
+//    }
+//
+//    public void selectMoneyInput() {
+//        display.getSelection();
+//    }
 
     public void moneyInput() {
         input.takeMoney();

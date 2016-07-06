@@ -16,7 +16,7 @@ Card card = new Card();
 
     @Override
     public void getCardData() {
-        card.setPin("12345");
+        card.setPin("1234");
         card.setCardId(1);
         card.getCardId();
 

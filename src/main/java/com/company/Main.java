@@ -16,6 +16,7 @@ public class Main {
 
             switch (operationID) {
                 case 1:
+                    //atm.selectWithDrowl();
                     atm.selectWithDrowlAmount();
                     boolean sumOk = atm.checkSum();
                             if (sumOk) {
@@ -27,7 +28,7 @@ public class Main {
                                     break;
 
                 case 2:
-                    atm.selectMoneyInput();
+                    //atm.selectMoneyInput();
                     atm.moneyInput();
                     atm.checkAmount();
                     atm.showAmount();
