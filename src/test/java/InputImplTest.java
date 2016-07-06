@@ -1,4 +1,9 @@
-import com.company.impl.InputImpl;
+import com.company.*;
+import com.company.impl.*;
+import com.google.inject.AbstractModule;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

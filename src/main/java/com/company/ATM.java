@@ -1,10 +1,10 @@
 package com.company;
+
 import com.google.inject.Inject;
 
 import java.util.Scanner;
 
 public class ATM {
-
     @Inject
     CardReader cardReader;
     @Inject
@@ -15,6 +15,7 @@ public class ATM {
     Output output;
     @Inject
     ServerConnection serverConnection;
+
 
     public void insertCard() {
         cardReader.getCardData();
@@ -53,7 +54,9 @@ public class ATM {
         display.showInputAmount();
     }
 
-    public void selectWithDrowlAmount() {display.getAmount();
+
+    public void selectWithDrowlAmount() {
+        display.getAmount();
     }
 
     public boolean checkSum() {

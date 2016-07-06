@@ -1,5 +1,6 @@
 package com.company;
 
+
 import com.company.module.ATMModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;

@@ -11,7 +11,7 @@ public class ServerConnectionImpl implements ServerConnection {
 
     @Override
     public int checkSum() {
-        return 1000;
+        return 200;
     }
 
     @Override
