@@ -26,10 +26,8 @@ public class DisplayImpl implements Display {
     }
 
     @Override
-    public int getAmount() {
+    public void getAmount() {
         System.out.println("Enter amount");
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextInt();
     }
 
     @Override

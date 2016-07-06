@@ -1,25 +1,29 @@
 package com.company;
-import com.company.impl.DisplayImpl;
-import com.company.impl.CardReaderImpl;
-import com.company.impl.InputImpl;
-import com.company.impl.ServerConnectionImpl;
+import com.google.inject.Inject;
+
+import java.util.Scanner;
 
 public class ATM {
+
+    @Inject
     CardReader cardReader;
-    DisplayImpl display = new DisplayImpl();
-    CardReaderImpl cardReaderImpl = new CardReaderImpl();
-    InputImpl input = new InputImpl();
+    @Inject
+    Display display;
+    @Inject
+    Input input;
+    @Inject
     Output output;
-    ServerConnectionImpl serverConnection = new ServerConnectionImpl();
+    @Inject
+    ServerConnection serverConnection;
 
     public void insertCard() {
-        cardReaderImpl.getCardData();
+        cardReader.getCardData();
         serverConnection.getAccount();
     }
 
     public boolean checkPin(){
         String inputPin = display.getPin();
-        String cardPin = cardReaderImpl.getPin();
+        String cardPin = cardReader.getPin();
         if (inputPin.equals(cardPin)) {
             return true;
         } else return false;
@@ -49,13 +53,14 @@ public class ATM {
         display.showInputAmount();
     }
 
-    public int selectWithDrowlAmount() {
-        return display.getAmount();
+    public void selectWithDrowlAmount() {display.getAmount();
     }
 
     public boolean checkSum() {
         int accountSum = serverConnection.checkSum();
-        if (accountSum > display.getAmount()) {
+        Scanner scanner = new Scanner(System.in);
+        int amount = scanner.nextInt();
+        if (accountSum > amount) {
             return true;
         } else return false;
     }
