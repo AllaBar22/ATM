@@ -6,7 +6,7 @@ public interface Display {
 
     int getSelection();
 
-    int getAmount();
+    void getAmount();
 
     void notEnoughMessage();
 

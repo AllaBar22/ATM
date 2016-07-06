@@ -1,10 +1,13 @@
 package com.company;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+
 public class Main {
 
     public static void main(String[] args) {
-
-        ATM atm = new ATM();
+        Injector injector = Guice.createInjector(new ATMModule());
+        ATM atm = injector.getInstance(ATM.class);
         atm.insertCard();
         boolean pinOk = atm.checkPin();
         if (pinOk) {
@@ -13,7 +16,6 @@ public class Main {
 
             switch (operationID) {
                 case 1:
-                    atm.selectWithDrowl();
                     atm.selectWithDrowlAmount();
                     boolean sumOk = atm.checkSum();
                             if (sumOk) {

@@ -9,7 +9,7 @@ public class CardReaderImpl implements CardReader {
 Card card = new Card();
     @Override
     public String getPin() {
-        card.setPin("12345");
+        card.setPin("1234");
         return card.getPin();
     }
 
